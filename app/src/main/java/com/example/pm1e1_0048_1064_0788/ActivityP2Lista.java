@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -14,18 +15,26 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.pm1e1_0048_1064_0788.Transacciones.Contactos;
+import com.example.pm1e1_0048_1064_0788.Transacciones.Transacciones;
+import com.example.pm1e1_0048_1064_0788.conexion.SQLiteConexion;
+
 import java.util.ArrayList;
 
 public class ActivityP2Lista extends AppCompatActivity {
 
+    SQLiteConexion conexion;
     Button regresar, verimagen, actualizar;
     ListView contactos;
-    //ArrayList<Contactos> listaContactos;
+    ArrayList<Contactos> listaContactos;
+    ArrayList<String> arregloContactos;
+    ArrayAdapter adp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_p2_lista);
+        conexion = new SQLiteConexion(this, Transacciones.NameDatabase, null, 1);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -40,7 +49,7 @@ public class ActivityP2Lista extends AppCompatActivity {
         contactos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                int color = Color.parseColor("#abaaad");
+                int color = Color.parseColor("#aed1f2");
                 view.setBackgroundColor(color);
             }
         });
