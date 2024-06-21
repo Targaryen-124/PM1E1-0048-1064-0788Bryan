@@ -1,9 +1,12 @@
 package com.example.pm1e1_0048_1064_0788;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class ActivityP2Foto extends AppCompatActivity {
 
     Button regresar;
+    ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +30,19 @@ public class ActivityP2Foto extends AppCompatActivity {
         });
 
         regresar = (Button) findViewById(R.id.btnRegresarF);
+        img = (ImageView) findViewById(R.id.imgFoto);
+
+        Intent intent = getIntent();
+        String foto = intent.getStringExtra("foto");
+        String nombre = intent.getStringExtra("nombre");
+        getSupportActionBar().setTitle("Ver Foto de " + nombre);
+
+        if (foto == null){
+            img.setImageResource(R.drawable.usuario);
+        }else{
+            Bitmap b = BitmapFactory.decodeFile(foto);
+            img.setImageBitmap(b);
+        }
 
         regresar.setOnClickListener(new View.OnClickListener() {
             @Override

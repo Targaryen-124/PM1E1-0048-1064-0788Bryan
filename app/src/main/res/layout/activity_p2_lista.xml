@@ -8,19 +8,39 @@
     android:orientation="vertical"
     tools:context=".ActivityP2Lista">
 
-    <Button
-        android:id="@+id/btnRegresar"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:backgroundTint="#3F51B5"
-        android:text="Atras"
-        app:icon="@android:drawable/ic_menu_revert"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintEnd_toStartOf="@+id/searchView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:backgroundTint="#3F51B5"
+            android:text="Atras"
+            app:icon="@android:drawable/ic_menu_revert"
+            app:layout_constraintBottom_toTopOf="@+id/searchView"
+            app:layout_constraintEnd_toStartOf="@+id/searchView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.5" />
+
+        <Button
+            android:id="@+id/btnLlamarC"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:backgroundTint="#3F51B5"
+            android:text="Llamar"
+            app:icon="@android:drawable/ic_menu_call" />
+    </LinearLayout>
 
     <SearchView
         android:layout_width="match_parent"
@@ -114,5 +134,10 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"></LinearLayout>
 
 </LinearLayout>

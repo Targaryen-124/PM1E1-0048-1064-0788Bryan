@@ -24,10 +24,10 @@
         android:layout_weight="1" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgFoto"
         android:layout_width="match_parent"
         android:layout_height="375dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/usuario" />
 
     <Space
         android:layout_width="match_parent"
