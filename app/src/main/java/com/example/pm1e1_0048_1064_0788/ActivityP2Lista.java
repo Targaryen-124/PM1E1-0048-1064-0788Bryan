@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class ActivityP2Lista extends AppCompatActivity {
 
-    Button regresar, verimagen;
+    Button regresar, verimagen, actualizar;
     ListView contactos;
     //ArrayList<Contactos> listaContactos;
     @Override
@@ -35,6 +35,7 @@ public class ActivityP2Lista extends AppCompatActivity {
         regresar = (Button) findViewById(R.id.btnRegresar);
         verimagen = (Button) findViewById(R.id.btnImagenC);
         contactos = ( ListView ) findViewById(R.id.lstContactos);
+        actualizar = (Button) findViewById(R.id.btnCompartirC);
 
         contactos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -66,5 +67,23 @@ public class ActivityP2Lista extends AppCompatActivity {
                 //}
             }
         });
+
+        actualizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            //    int seleccionado = lista.getCheckedItemPosition();
+            //    if (seleccionado != ListView.INVALID_POSITION){
+            //        int id = listaContactos.get(seleccionado).getId();
+            //        Actualizar(id);
+            //    }
+            }
+        });
+
+    }
+
+    public void Actualizar(int id){
+        Intent intent = new Intent(ActivityP2Lista.this, MainActivity.class);
+   //     intent.putExtra("id", id);
+   //     startActivity(intent);
     }
 }
