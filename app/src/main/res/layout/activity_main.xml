@@ -1,102 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="match_parent"
-        android:layout_height="244dp"
+    <ImageView
+        android:id="@+id/logoUth"
+        android:layout_width="67dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="328dp"
+        android:contentDescription="@string/logoUthDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/logouth" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="128dp"
+        android:layout_height="131dp"
+        app:layout_constraintBottom_toTopOf="@+id/tomarFoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pais" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputLayout"
-        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="25sp"
-        android:layout_marginEnd="25sp"
-        android:hint="Seleccione un pais"
-        app:boxCornerRadiusBottomEnd="10sp"
-        app:boxCornerRadiusBottomStart="10sp"
-        app:boxCornerRadiusTopEnd="10sp"
-        app:boxCornerRadiusTopStart="10sp"
-        app:boxStrokeWidth="0sp"
-        app:boxStrokeWidthFocused="0sp">
-
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/inputTV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            app:simpleItems="@android:array/organizationTypes" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nombre" />
+    <Button
+        android:id="@+id/tomarFoto"
+        android:layout_width="161dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="488dp"
+        android:text="@string/buttonTomarFoto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/nombreText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text" />
+        android:id="@+id/nombre"
+        android:layout_width="366dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/nombreText"
+        app:layout_constraintBottom_toTopOf="@+id/pais"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Telefono" />
-
-    <EditText
-        android:id="@+id/telefonoText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nota" />
+    <Spinner
+        android:id="@+id/pais"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        android:entries="@array/paises"
+        app:layout_constraintBottom_toTopOf="@+id/numero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/notaText"
-        android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:id="@+id/numero"
+        android:layout_width="366dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/numeroText"
+        app:layout_constraintBottom_toTopOf="@+id/nota"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/nota"
+        android:layout_width="364dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="152dp"
         android:ems="10"
-        android:inputType="text" />
+        android:gravity="start|top"
+        android:hint="@string/notaText"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonShow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/inputLayout"
-        android:backgroundTint="#3F51B5"
-        android:text="Salvar Contacto" />
+        android:id="@+id/guardar"
+        android:layout_width="161dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="80dp"
+        android:text="@string/buttonGuardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/salvadosButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#3F51B5"
-        android:text="Contactos Salvados" />
+        android:id="@+id/verContactos"
+        android:layout_width="161dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="80dp"
+        android:text="@string/buttonVerContactos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

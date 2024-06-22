@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">PM1E1-0048-1064-0788</string>
+    <string name="selectImagen">Seleccione una imagen</string>
+    <string name="descripcionImagen">Imagen Usuario</string>
+    <string name="buttonVerContactos">Ver Contactos</string>
+    <string name="logoUthDescripcion">Logo de UTH</string>
+    <string name="buttonActualizar">Actualizar</string>
+    <string name="buttonTomarFoto">Tomar Foto</string>
+    <string name="buttonCompartir">Compartir</string>
+    <string name="buttonRegresar">Regresar</string>
+    <string name="buttonEliminar">Eliminar</string>
+    <string name="buttonGuardar">Guardar</string>
+    <string name="buttonLlamar">LLamar</string>
+    <string name="nombreText">Nombre</string>
+    <string name="numeroText">Numero</string>
+    <string name="notaText">Nota</string>
 </resources>
