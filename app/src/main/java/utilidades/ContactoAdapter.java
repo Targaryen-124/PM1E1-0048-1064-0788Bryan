@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.pm1e1_0048_1064_0788.ActivityVerImagen;
 import com.example.pm1e1_0048_1064_0788.MainActivity;
 import com.example.pm1e1_0048_1064_0788.R;
 
@@ -82,6 +83,14 @@ public class ContactoAdapter extends ArrayAdapter<Contactos> {
       Intent callIntent = new Intent(Intent.ACTION_DIAL);
       callIntent.setData(Uri.parse("tel:" + currentContacto.getNumero()));
       context.startActivity(callIntent);
+    });
+
+    // Ver imagen
+    Button buttonVerImagen = listItem.findViewById(R.id.verImagen);
+    buttonVerImagen.setOnClickListener(v -> {
+      Intent intent = new Intent(context, ActivityVerImagen.class);
+      intent.putExtra("imageBase64", currentContacto.getImagen());
+      context.startActivity(intent);
     });
 
     return listItem;

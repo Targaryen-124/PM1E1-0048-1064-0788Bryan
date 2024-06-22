@@ -2,8 +2,8 @@
 <resources>
     <string-array name="paises">
         <item>Honduras (504)</item>
-        <item>Guatemala (503)</item>
+        <item>Guatemala (502)</item>
         <item>Costa Rica (506)</item>
-        <item>El Salvador (502)</item>
+        <item>El Salvador (503)</item>
     </string-array>
 </resources>

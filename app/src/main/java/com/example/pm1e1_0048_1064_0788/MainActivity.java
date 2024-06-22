@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
   String currentPhotoPath, image64;
   private SQLiteConexion conexion;
   Button btnCaptura, verContactos;
+  ImageView ObjetoImagen, logoUth;
   private int contactoId = -1;
-  ImageView ObjetoImagen;
   private Button guardar;
   private Spinner pais;
 
@@ -94,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
     verContactos = findViewById(R.id.verContactos);
     guardar = findViewById(R.id.guardar);
 
+    logoUth = findViewById(R.id.logoUth);
+    logoUth.setImageResource(R.drawable.logouth);
 
     if (getIntent().hasExtra("id")) {
       contactoId = getIntent().getIntExtra("id", -1);

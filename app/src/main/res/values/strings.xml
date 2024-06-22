@@ -6,6 +6,7 @@
     <string name="logoUthDescripcion">Logo de UTH</string>
     <string name="buttonActualizar">Actualizar</string>
     <string name="buttonTomarFoto">Tomar Foto</string>
+    <string name="buttonVerImagen">Ver Imagen</string>
     <string name="buttonCompartir">Compartir</string>
     <string name="buttonRegresar">Regresar</string>
     <string name="buttonEliminar">Eliminar</string>
